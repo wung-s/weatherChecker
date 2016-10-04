@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-// import InputText from './InputText';
-// import Button from './Button';
-import Header from '../components/Header';
+// import Header from '../components/Header';
+import Home from '../components/Home';
 
-
-class HeaderContainer extends Component {
+class HomeContainer extends Component {
   constructor() {
     super();
-    this.state = {
+   this.state = {
       location: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -30,17 +28,23 @@ class HeaderContainer extends Component {
     this.context.router.push('/forecast/' + location);
   }
 
+  componentDidMount() {
+    console.log('componentDidMount...');
+  }
+
   render() {
+    console.log('loading HomeContainer');
     return (
-      <Header
+      <Home
         onUpdate={this.handleUpdate}
         onSubmit={this.handleSubmit}
-        />
+      />
     )
   }
 }
 
-HeaderContainer.contextTypes = {
+HomeContainer.contextTypes = {
   router: React.PropTypes.object.isRequired
 }
-export default HeaderContainer;
+
+export default HomeContainer;

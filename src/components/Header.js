@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PropTypes } from 'react';
 import InputText from './InputText';
 import Button from './Button';
 
@@ -10,11 +10,16 @@ function Header(props) {
         <div className='col-md-6'>
           <p> Weather Now </p>
         </div>
-        <InputText />
+        <InputText onUpdate={props.onUpdate} />
         <Button />
       </form>
     </div>
   )
+}
+
+Header.propTypes = {
+    onUpdate: PropTypes.func.isRequired,
+    onSubmit: PropTypes.func.isRequired
 }
 
 
