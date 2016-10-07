@@ -15,7 +15,6 @@ class HeaderContainer extends Component {
   }
 
   handleUpdate(e) {
-    console.log(e.target.value);
     this.setState({
       location: e.target.value
     })

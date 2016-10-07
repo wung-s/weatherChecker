@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 import InputText from './InputText';
 import Button from './Button';
 
-// class Header extends Component {
 function Header(props) {
   return (
     <div className="App-header">
